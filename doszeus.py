@@ -7,6 +7,10 @@ import threading
 import sys
 import os
 from os import system, name
+os.system("clear")
+print("З А Г Р У З К А....")
+time.sleep(2.5)
+os.system("clear")
 
 print("###########################")
 print("###### TCP/UDP FLOOD ######")
