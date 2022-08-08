@@ -32,7 +32,7 @@ awnser_fakeip = input(" HOST/IP:=> ")
 awnser_threads =input(" THREADS/Потоки:=> ")
 
 target = awnser_target
-port = 80
+port = 80;443
 fake_ip = awnser_fakeip
 
 attack_num = 0
