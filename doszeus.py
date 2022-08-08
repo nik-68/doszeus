@@ -23,9 +23,6 @@ print("З А Г Р У З К А....")
 time.sleep(2.5)
 os.system("clear")
 
-# http://m.bibika.ru/
-
-
 print("###########################")
 print("###### TCP/UDP FLOOD ######")
 print("###########################")
