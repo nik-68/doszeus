@@ -26,7 +26,7 @@ os.system("clear")
 print("###########################")
 print("###### TCP/UDP FLOOD ######")
 print("###########################")
-
+print()
 ip = str(input(" HOST/IP:=> "))
 port = int(input(" PORT:=> "))
 choice = str(input(" UDP(Y/N):=> "))	
