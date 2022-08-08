@@ -23,7 +23,7 @@ OhMyXyden = input()
 
 if OhMyXyden == "n":
 
-	exit(0)ip = str(input(" HOST/IP: => "))
+exit(0)ip = str(input(" HOST/IP: => "))
 
 port = int(input(" PORT: => "))
 
