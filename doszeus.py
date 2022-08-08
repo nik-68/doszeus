@@ -27,9 +27,6 @@ print("###########################")
 print("###### TCP/UDP FLOOD ######")
 print("###########################")
 print()
-
-tprint("DK6", font="roman")
-
 awnser_target = input(" Target/URL:=> ")
 awnser_fakeip = input(" HOST/IP:=> ")
 awnser_threads =input(" THREADS/Потоки:=> ")
